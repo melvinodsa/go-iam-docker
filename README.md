@@ -20,7 +20,7 @@ This repository provides a Docker Compose setup to run the full [Go IAM](https:/
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/<your-org-or-username>/go-iam-docker.git
+git clone https://github.com/melvinodsa/go-iam-docker.git
 cd go-iam-docker
 ```
 
