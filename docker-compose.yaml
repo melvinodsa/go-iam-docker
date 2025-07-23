@@ -1,0 +1,49 @@
+services:
+  mongo-go-iam:
+    image: mongo:latest
+    container_name: mongo-go-iam
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis-go-iam:
+    image: redis:latest
+    container_name: redis-go-iam
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  go-iam:
+    image: melvinodsa/go-iam:latest
+    container_name: go-iam
+    build:
+      context: ./go-iam # adjust if source is elsewhere
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo-go-iam
+      - redis-go-iam
+
+  go-iam-ui:
+    image: melvinodsa/go-iam-ui:latest
+    container_name: go-iam-ui
+    build:
+      context: ./go-iam-ui # adjust if needed
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+    env_file:
+      - .env
+    depends_on:
+      - go-iam
+
+volumes:
+  mongo-data:
+    driver: local
+  redis-data:
+    driver: local
