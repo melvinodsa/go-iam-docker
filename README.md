@@ -2,6 +2,11 @@
 
 This repository provides a Docker Compose setup to run the full [Go IAM](https://github.com/melvinodsa/go-iam) authentication and authorization platform along with its admin UI and dependencies (MongoDB and Redis). This setup is designed primarily for **local development and testing**.
 
+> ✅ Admin UI: [go-iam-ui](https://github.com/melvinodsa/go-iam-ui)  
+> 🐳 Docker Setup: [go-iam-docker](https://github.com/melvinodsa/go-iam-docker)  
+> 🔐 Backend: [go-iam](https://github.com/melvinodsa/go-iam)  
+> 📦 SDK: [go-iam-sdk](https://github.com/melvinodsa/go-iam-sdk)
+
 ---
 
 ## ✨ What’s Included
@@ -64,6 +69,6 @@ This will build the backend (go-iam) and frontend (go-iam-ui) containers, and st
 
 Once all services are up:
 
-Admin UI: http://localhost:4173
-
-API (Go IAM): http://localhost:3000
+- Admin UI: [http://localhost:4173](http://localhost:4173)
+- API: [http://localhost:3000](http://localhost:3000)
+- API Docs: [http://localhost:3000/docs](http://localhost:3000/docs)
