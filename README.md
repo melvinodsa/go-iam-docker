@@ -7,6 +7,7 @@ This repository provides a Docker Compose setup to run the full [Go IAM](https:/
 > 🔐 Backend: [go-iam](https://github.com/melvinodsa/go-iam)  
 > 📦 SDK: [go-iam-sdk](https://github.com/melvinodsa/go-iam-sdk)  
 > 🚀 Examples: [go-iam-examples](https://github.com/melvinodsa/go-iam-examples)
+> 💬 Reddit Community: [r/GoIAM](https://www.reddit.com/r/GoIAM/)
 
 ---
 
